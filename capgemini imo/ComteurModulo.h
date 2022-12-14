@@ -1,28 +1,28 @@
 #pragma once
 #include "ACompteur.h"
-#include <iostream>
+
 class ComteurModulo : public ACompteur
 {
-	int etat;
+	int état;
 	int modulo;
 public:
 	ComteurModulo(int modulo)
 	{
 		this->modulo = modulo;
-		etat = 0;
+		état = 0;
 	}
 	void incrementer()
 	{
-		if (etat != modulo)
+		if (état < modulo-1)
 		{
-			etat++;
+			état++;
 		}
 		else
-		etat = 0;
+		état = 0;
 	}
 	int getEtat()
 	{
-		return etat;
+		return état;
 	}
 };
 
